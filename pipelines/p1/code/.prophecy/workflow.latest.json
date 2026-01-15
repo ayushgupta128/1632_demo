@@ -92,6 +92,12 @@
     "sourcePort" : "gM3MD3eWpgAXp2DCvD9Pe$$GKK0gYe0WOkEPBEG5hlS0",
     "target" : "auO0CvifmCLKMpfWZhlze$$EKkTCJNcPFnetHZPZVu3G",
     "targetPort" : "23j1YJQp_eAVRvFoPwMV0$$bGNrFirCarWMjkfrCMvNI"
+  }, {
+    "id" : "l2eBN0VTmTDjEuxr499V-$$c-Tss-w5lLLc9D8xKVY2W",
+    "source" : "auO0CvifmCLKMpfWZhlze$$EKkTCJNcPFnetHZPZVu3G",
+    "sourcePort" : "f2Fs2lvyJ3ZWkpqc5leuE$$bo2fAifJsqzPEQHG5_qxB",
+    "target" : "UPTfg3dcxyl5LMjN5jjwH$$iT8jb5-CXb93GwZlE0rrD",
+    "targetPort" : "QED_GEdmuFN0kCIy-k_vs$$fbgwskrqnYgM0SFa5cu6j"
   } ],
   "processes" : {
     "Ix88KTmwudsnLELtDI8js$$GzbZFTAfJSnfY39QEMEHB" : {
@@ -181,6 +187,65 @@
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.54&projectSubscriptionProjectId=12654&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "UPTfg3dcxyl5LMjN5jjwH$$iT8jb5-CXb93GwZlE0rrD" : {
+      "id" : "UPTfg3dcxyl5LMjN5jjwH$$iT8jb5-CXb93GwZlE0rrD",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "Limit_1",
+        "slug" : "Limit_1",
+        "x" : -320,
+        "y" : -300,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "QED_GEdmuFN0kCIy-k_vs$$fbgwskrqnYgM0SFa5cu6j",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "A",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "First attribute describing a key detail or category for the record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "B",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Second attribute providing additional information or classification for the record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "QWuNO2Cl1IyB7eKxbjd00$$hOyxk9BHyY2pqpGGUnhnT",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "limit" : "10"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.54&projectSubscriptionProjectId=12654&path=gems/Limit",
         "projectName" : "ProphecySparkBasicsPython"
       }
     }
