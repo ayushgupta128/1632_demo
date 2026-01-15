@@ -104,6 +104,12 @@
     "sourcePort" : "QWuNO2Cl1IyB7eKxbjd00$$hOyxk9BHyY2pqpGGUnhnT",
     "target" : "Pzgg55pS_hBU4tVQl3cxr$$LUb_copIpKgJV0bl4mu-S",
     "targetPort" : "M2zEIkH_4nTSeFOzEqN_P$$2FPpe_YXFsGrRQiOwkcFC"
+  }, {
+    "id" : "r3JPE9aB5Z49rSI6qdpVh$$2ijTrXWtMS19R1e1yTpIr",
+    "source" : "Pzgg55pS_hBU4tVQl3cxr$$LUb_copIpKgJV0bl4mu-S",
+    "sourcePort" : "_aRGdsWkyvDUUHwN8xF1r$$xpTYBaYfabtYdBv8n296G",
+    "target" : "d6SaOwDjvExcCyjdVEOeV$$_0fAGgCrmkl-LULvBmMC2",
+    "targetPort" : "w20oHd0Q4lVuxBOLjWJTx$$wVPR29fVzjJ0pDXED_RCt"
   } ],
   "processes" : {
     "Ix88KTmwudsnLELtDI8js$$GzbZFTAfJSnfY39QEMEHB" : {
@@ -131,69 +137,6 @@
       },
       "properties" : {
         "datasetId" : "datasets/SEED"
-      }
-    },
-    "auO0CvifmCLKMpfWZhlze$$EKkTCJNcPFnetHZPZVu3G" : {
-      "id" : "auO0CvifmCLKMpfWZhlze$$EKkTCJNcPFnetHZPZVu3G",
-      "component" : "Filter",
-      "metadata" : {
-        "label" : "Filter_1",
-        "slug" : "Filter_1",
-        "x" : -540,
-        "y" : -280,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false,
-        "dataPreview" : false,
-        "showRecordsCount" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "23j1YJQp_eAVRvFoPwMV0$$bGNrFirCarWMjkfrCMvNI",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "A",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "First attribute describing a key detail or category for the record.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "B",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Second attribute providing additional information or classification for the record.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "f2Fs2lvyJ3ZWkpqc5leuE$$bo2fAifJsqzPEQHG5_qxB",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "columnsSelector" : [ ],
-        "condition" : {
-          "format" : "sql",
-          "expression" : "true"
-        }
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.54&projectSubscriptionProjectId=12654&path=gems/Filter",
-        "projectName" : "ProphecySparkBasicsPython"
       }
     },
     "UPTfg3dcxyl5LMjN5jjwH$$iT8jb5-CXb93GwZlE0rrD" : {
@@ -300,6 +243,128 @@
         } ],
         "outputs" : [ {
           "id" : "_aRGdsWkyvDUUHwN8xF1r$$xpTYBaYfabtYdBv8n296G",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "limit" : "10"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.54&projectSubscriptionProjectId=12654&path=gems/Limit",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "auO0CvifmCLKMpfWZhlze$$EKkTCJNcPFnetHZPZVu3G" : {
+      "id" : "auO0CvifmCLKMpfWZhlze$$EKkTCJNcPFnetHZPZVu3G",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_1",
+        "slug" : "Filter_1",
+        "x" : -540,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "23j1YJQp_eAVRvFoPwMV0$$bGNrFirCarWMjkfrCMvNI",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "A",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "First attribute describing a key detail or category for the record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "B",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Second attribute providing additional information or classification for the record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "f2Fs2lvyJ3ZWkpqc5leuE$$bo2fAifJsqzPEQHG5_qxB",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "true"
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.54&projectSubscriptionProjectId=12654&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "d6SaOwDjvExcCyjdVEOeV$$_0fAGgCrmkl-LULvBmMC2" : {
+      "id" : "d6SaOwDjvExcCyjdVEOeV$$_0fAGgCrmkl-LULvBmMC2",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "Limit_3",
+        "slug" : "Limit_3",
+        "x" : -20,
+        "y" : -380,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "w20oHd0Q4lVuxBOLjWJTx$$wVPR29fVzjJ0pDXED_RCt",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "A",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "First attribute describing a key detail or category for the record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "B",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Second attribute providing additional information or classification for the record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "9QtGAukVGWHnL8FAfa3MH$$pyAMTfTnYW5sHG1WcV-st",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
