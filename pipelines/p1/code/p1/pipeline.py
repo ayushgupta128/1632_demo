@@ -7,7 +7,8 @@ from prophecy.utils import *
 from p1.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_BulkColumnRename_1 = BulkColumnRename_1(spark)
+    df_SEED = SEED(spark)
+    df_Filter_1 = Filter_1(spark, df_SEED)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("p1").getOrCreate()

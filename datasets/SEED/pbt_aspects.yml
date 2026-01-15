@@ -1,0 +1,19 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: A
+    type: string
+    nullable: true
+    metadata:
+      description: First attribute describing a key detail or category for the record.
+      mappings: []
+      tags: []
+  - name: B
+    type: string
+    nullable: true
+    metadata:
+      description: Second attribute providing additional information or classification
+        for the record.
+      mappings: []
+      tags: []

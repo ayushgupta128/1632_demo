@@ -20,11 +20,25 @@ pipelines:
     language: python
     createdAt: '2026-01-15 12:11:10'
     datasets:
-      inputs: []
+      inputs:
+      - datasets/SEED
       outputs: []
     subgraphs: []
     dependencies: {}
-datasets: {}
+datasets:
+  datasets/SEED:
+    name: SEED
+    description: ''
+    author: g.ayush@prophecy.io
+    createdAt: '2026-01-15 12:47:02'
+    mode: batch
+    physicalDatasets:
+      guides-prod-fabric:
+        fabricId: 30674
+        datasetType: File
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2026-01-15 12:47:02'
 templates: {}
 jobs: {}
 gemContainer:

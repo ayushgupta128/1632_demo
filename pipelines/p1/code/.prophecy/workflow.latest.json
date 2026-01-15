@@ -26,7 +26,7 @@
       }
     },
     "language" : "python",
-    "fabricId" : "21998",
+    "fabricId" : "30674",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -86,14 +86,20 @@
     "configTopLevelPackage" : "p1",
     "configurationVersion" : "v2"
   },
-  "connections" : [ ],
+  "connections" : [ {
+    "id" : "ZteVv-KbU1bc-id2kuwvd$$Kq0ORt_GNDKJeyKI6pi5A",
+    "source" : "Ix88KTmwudsnLELtDI8js$$GzbZFTAfJSnfY39QEMEHB",
+    "sourcePort" : "gM3MD3eWpgAXp2DCvD9Pe$$GKK0gYe0WOkEPBEG5hlS0",
+    "target" : "auO0CvifmCLKMpfWZhlze$$EKkTCJNcPFnetHZPZVu3G",
+    "targetPort" : "23j1YJQp_eAVRvFoPwMV0$$bGNrFirCarWMjkfrCMvNI"
+  } ],
   "processes" : {
     "Ix88KTmwudsnLELtDI8js$$GzbZFTAfJSnfY39QEMEHB" : {
       "id" : "Ix88KTmwudsnLELtDI8js$$GzbZFTAfJSnfY39QEMEHB",
       "component" : "Source",
       "metadata" : {
-        "label" : "Source_0",
-        "slug" : "Source_0",
+        "label" : "SEED",
+        "slug" : "SEED",
         "x" : -700,
         "y" : -280,
         "phase" : 0,
@@ -111,28 +117,55 @@
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       },
-      "properties" : { }
+      "properties" : {
+        "datasetId" : "datasets/SEED"
+      }
     },
-    "U01b57fZJtmORqCenAIxk$$68zYj-0Kdq7GNEclA64JY" : {
-      "id" : "U01b57fZJtmORqCenAIxk$$68zYj-0Kdq7GNEclA64JY",
-      "component" : "BulkColumnRename",
+    "auO0CvifmCLKMpfWZhlze$$EKkTCJNcPFnetHZPZVu3G" : {
+      "id" : "auO0CvifmCLKMpfWZhlze$$EKkTCJNcPFnetHZPZVu3G",
+      "component" : "Filter",
       "metadata" : {
-        "label" : "BulkColumnRename_1",
-        "slug" : "BulkColumnRename_1",
-        "x" : -560,
+        "label" : "Filter_1",
+        "slug" : "Filter_1",
+        "x" : -540,
         "y" : -280,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "dataPreview" : false,
+        "showRecordsCount" : false
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "wCvoC5V-3zr8hOVpWO810$$vn74yS0Tpjo-ho324-Z8J",
-          "slug" : "in0"
+          "id" : "23j1YJQp_eAVRvFoPwMV0$$bGNrFirCarWMjkfrCMvNI",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "A",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "First attribute describing a key detail or category for the record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "B",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Second attribute providing additional information or classification for the record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "YaGgj5uVGTQBMnY4hH-Ff$$3D--wv565GOsW4i0qYPZB",
+          "id" : "f2Fs2lvyJ3ZWkpqc5leuE$$bo2fAifJsqzPEQHG5_qxB",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -140,18 +173,14 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "prefix" : "",
-        "columnNames" : [ ],
-        "suffix" : "",
-        "schema" : {
-          "type" : "struct",
-          "fields" : [ ]
-        },
-        "customExpression" : "",
-        "renameMethod" : ""
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "true"
+        }
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.54&projectSubscriptionProjectId=12654&path=gems/BulkColumnRename",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.54&projectSubscriptionProjectId=12654&path=gems/Filter",
         "projectName" : "ProphecySparkBasicsPython"
       }
     }
@@ -162,54 +191,5 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.processes.Ix88KTmwudsnLELtDI8js$$GzbZFTAfJSnfY39QEMEHB.properties.datasetId",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "dataset id missing",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.U01b57fZJtmORqCenAIxk$$68zYj-0Kdq7GNEclA64JY.ports.inputs[0]",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Please connect input port in0",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.U01b57fZJtmORqCenAIxk$$68zYj-0Kdq7GNEclA64JY.properties.renameMethod",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Please select a method to rename columns.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  } ]
+  }
 }
