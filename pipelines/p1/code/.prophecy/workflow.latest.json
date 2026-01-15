@@ -110,8 +110,73 @@
     "sourcePort" : "_aRGdsWkyvDUUHwN8xF1r$$xpTYBaYfabtYdBv8n296G",
     "target" : "d6SaOwDjvExcCyjdVEOeV$$_0fAGgCrmkl-LULvBmMC2",
     "targetPort" : "w20oHd0Q4lVuxBOLjWJTx$$wVPR29fVzjJ0pDXED_RCt"
+  }, {
+    "id" : "vjaBse4s2IZ_DZp9Y5eTq$$Q-tm44gSTMLeBSmBCjruQ",
+    "source" : "d6SaOwDjvExcCyjdVEOeV$$_0fAGgCrmkl-LULvBmMC2",
+    "sourcePort" : "9QtGAukVGWHnL8FAfa3MH$$pyAMTfTnYW5sHG1WcV-st",
+    "target" : "fdIl_ArZB-rEhlm4uLSjr$$GL28ezMQsLuuOZvoCQGIK",
+    "targetPort" : "5gCW3rrVOyiHmKoVq7Gu0$$Cg-Z7etd34Hh20uGOSg0d"
   } ],
   "processes" : {
+    "fdIl_ArZB-rEhlm4uLSjr$$GL28ezMQsLuuOZvoCQGIK" : {
+      "id" : "fdIl_ArZB-rEhlm4uLSjr$$GL28ezMQsLuuOZvoCQGIK",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "Limit_4",
+        "slug" : "Limit_4",
+        "x" : 160,
+        "y" : -400,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "5gCW3rrVOyiHmKoVq7Gu0$$Cg-Z7etd34Hh20uGOSg0d",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "A",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "First attribute describing a key detail or category for the record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "B",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Second attribute providing additional information or classification for the record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "JfJh07LIO6kvwsfYplEHT$$2AmlZJ1I5_LIRU5hl1KAD",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "limit" : "10"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.54&projectSubscriptionProjectId=12654&path=gems/Limit",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
     "Ix88KTmwudsnLELtDI8js$$GzbZFTAfJSnfY39QEMEHB" : {
       "id" : "Ix88KTmwudsnLELtDI8js$$GzbZFTAfJSnfY39QEMEHB",
       "component" : "Source",
