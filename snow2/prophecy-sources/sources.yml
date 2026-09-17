@@ -8,7 +8,7 @@ sources:
   - name: "a1h"
     description: "Details of aircraft models, including their range and codes, supporting\
       \ fleet management and planning decisions."
-    identifier: "AIRPORTS_DATA"
+    identifier: "dummy"
     config:
       tags:
       - "pipeline:p2"
@@ -16,18 +16,25 @@ sources:
       identifier: true
     columns:
     - name: "AIRPORT_CODE"
+      description: "Unique code assigned to each airport, used for identification\
+        \ in travel and logistics."
       dataType:
         type: "String"
     - name: "AIRPORT_NAME"
+      description: "Official name of the airport as recognized by aviation authorities."
       dataType:
         type: "String"
     - name: "CITY"
+      description: "City where the airport is located or primarily serves."
       dataType:
         type: "String"
     - name: "COORDINATES"
+      description: "Geographical latitude and longitude of the airport location."
       dataType:
         type: "String"
     - name: "TIMEZONE"
+      description: "Time zone in which the airport operates, affecting flight schedules\
+        \ and operations."
       dataType:
         type: "String"
     type: "table"

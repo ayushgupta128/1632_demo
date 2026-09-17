@@ -63,18 +63,25 @@ sqlSources:
         - name: AIRPORT_CODE
           dataType:
             type: String
+          description: Unique code assigned to each airport, used for identification
+            in travel and logistics.
         - name: AIRPORT_NAME
           dataType:
             type: String
+          description: Official name of the airport as recognized by aviation authorities.
         - name: CITY
           dataType:
             type: String
+          description: City where the airport is located or primarily serves.
         - name: COORDINATES
           dataType:
             type: String
+          description: Geographical latitude and longitude of the airport location.
         - name: TIMEZONE
           dataType:
             type: String
+          description: Time zone in which the airport operates, affecting flight schedules
+            and operations.
       description: Details of aircraft models, including their range and codes, supporting
         fleet management and planning decisions.
       author: g.ayush@prophecy.io
