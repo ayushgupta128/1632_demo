@@ -23,22 +23,7 @@ functions:
   airflowFunctions: {}
   businessRules: {}
 subgraphs: {}
-sqlModels:
-  .prophecy/metadata/sqlmodels/vfjyghn:
-    name: vfjyghn
-    schema: null
-    description: null
-    author: g.ayush@prophecy.io
-    files:
-    - models/vfjyghn.sql
-    - .prophecy/ide/models/vfjyghn.json
-    sqlDependencies:
-      models: []
-      datasets: []
-      seeds: []
-      sources: []
-      snapshots: []
-    createdAt: '2026-09-17 13:52:03'
+sqlModels: {}
 sqlSnapshots: {}
 sqlTests: {}
 sqlMacros:
