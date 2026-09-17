@@ -26,12 +26,7 @@
       "versionMode" : "latest"
     } ],
     "isTranspiledPipeline" : false,
-    "publishDiagnosticMetrics" : false,
-    "processesVsModelFiles" : {
-      "Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ" : "models/p2/p2__Reformat_1.sql",
-      "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF" : "models/p2/p2__Reformat_1.sql",
-      "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw" : "models/p2/p2__Reformat_1.sql"
-    }
+    "publishDiagnosticMetrics" : false
   },
   "processes" : {
     "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF" : {
@@ -67,39 +62,8 @@
         } ],
         "isCustomOutputSchema" : false
       }
-    },
-    "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw" : {
-      "id" : "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "Reformat_1",
-        "x" : -140,
-        "y" : -300,
-        "phase" : 0
-      },
-      "properties" : {
-        "columnsSelector" : [ ],
-        "expressions" : [ ]
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "6uUH237WUTfacXhMMU_Kd$$JCqI__c5nfyd9v52bTJ7P",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ",
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false
-      }
     }
   },
-  "connections" : [ {
-    "id" : "e4VOkwnevt10153R4mRXf",
-    "source" : "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF",
-    "sourcePort" : "ErQXHGglyi53K3vqquxFz$$jw1n1qZWGrrYrQ93vbx14",
-    "target" : "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw",
-    "targetPort" : "6uUH237WUTfacXhMMU_Kd$$JCqI__c5nfyd9v52bTJ7P"
-  } ],
+  "connections" : [ ],
   "component" : "Pipeline"
 }

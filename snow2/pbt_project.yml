@@ -60,22 +60,57 @@ sqlSources:
         entityType: ''
         providerType: snowflake
         fields:
-        - name: AIRCRAFT_CODE
+        - name: AIRPORT_CODE
           dataType:
             type: String
-          description: Unique code assigned to each aircraft for identification.
-        - name: MODEL
+        - name: AIRPORT_NAME
           dataType:
             type: String
-          description: Model name or type of the aircraft.
-        - name: RANGE
+        - name: CITY
           dataType:
-            type: Number
-          description: Maximum distance the aircraft can travel without refueling.
+            type: String
+        - name: COORDINATES
+          dataType:
+            type: String
+        - name: TIMEZONE
+          dataType:
+            type: String
       description: Details of aircraft models, including their range and codes, supporting
         fleet management and planning decisions.
       author: g.ayush@prophecy.io
       createdAt: '2026-09-17 10:57:02'
+      tableType: table
+    - name: snow_alias
+      schema:
+        entityType: ''
+        providerType: snowflake
+        fields:
+        - name: AIRPORT_CODE
+          dataType:
+            type: String
+          description: Unique code assigned to each airport, used for identification
+            in travel and logistics.
+        - name: AIRPORT_NAME
+          dataType:
+            type: String
+          description: Official name of the airport as recognized by aviation authorities.
+        - name: CITY
+          dataType:
+            type: String
+          description: City where the airport is located or primarily serves.
+        - name: COORDINATES
+          dataType:
+            type: String
+          description: Geographical latitude and longitude of the airport location.
+        - name: TIMEZONE
+          dataType:
+            type: String
+          description: Time zone in which the airport operates, affecting flight schedules
+            and operations.
+      description: Comprehensive information on airports, supporting identification
+        and location of airports by name, code, city, and timezone.
+      author: g.ayush@prophecy.io
+      createdAt: '2026-09-17 11:49:58'
       tableType: table
 sqlUnreferencedSources: {}
 sqlPipeline:
@@ -106,9 +141,18 @@ sqlOrchestratorPipelines:
     files:
     - .prophecy/ide/pipelines/p2.json
     - pipelines/p2.py
-    - models/p2/p2__Reformat_1.sql
-    - models/p2/schema.yml
     createdAt: '2026-09-17 10:55:39'
+  .prophecy/metadata/sqlorchestratorpipeline/p3:
+    name: p3
+    schema: null
+    description: null
+    author: g.ayush@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/p3.json
+    - pipelines/p3.py
+    - models/p3/p3__Reformat_1.sql
+    - models/p3/schema.yml
+    createdAt: '2026-09-17 11:49:23'
 sqlBusinessApps: {}
 dbtDependencies:
 - packageName: dbt-labs/dbt_utils

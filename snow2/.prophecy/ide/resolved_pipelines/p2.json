@@ -26,38 +26,38 @@
       "versionMode" : "latest"
     } ],
     "isTranspiledPipeline" : false,
-    "publishDiagnosticMetrics" : false,
-    "processesVsModelFiles" : {
-      "Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ" : "models/p2/p2__Reformat_1.sql",
-      "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF" : "models/p2/p2__Reformat_1.sql",
-      "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw" : "models/p2/p2__Reformat_1.sql"
-    }
+    "publishDiagnosticMetrics" : false
   },
   "processes" : {
-    "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw" : {
-      "id" : "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw",
-      "component" : "Model",
+    "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF" : {
+      "id" : "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF",
+      "component" : "Dataset",
       "metadata" : {
-        "label" : "p2__Reformat_1",
-        "phase" : 0
+        "label" : "aircraft_fleet_snowflake",
+        "x" : -560,
+        "y" : -280,
+        "phase" : 0,
+        "comment" : "Loads airline data from the AIRLINES_AIRLINES table for further processing.",
+        "autoUpdateComment" : true
       },
       "properties" : {
-        "modelName" : "p2__Reformat_1"
-      },
-      "visualMetaInfo" : {
-        "lastNodeProcessIds" : [ "Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ" ],
-        "skipIfZeroRows" : false,
-        "visualProcessIds" : [ "Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ", "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw", "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF" ],
-        "type" : "ephemeral",
-        "isTemporaryTable" : true
+        "table" : {
+          "name" : "a1h",
+          "sourceType" : "Table",
+          "sourceName" : "AIRLINES_AIRLINES",
+          "alias" : ""
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "6uUH237WUTfacXhMMU_Kd$$JCqI__c5nfyd9v52bTJ7P",
-          "slug" : "in_0"
+          "id" : "_YdktPmP-eutz4281BaZO$$anLzCv59Hu_MkZYGt1-sh",
+          "slug" : "in"
         } ],
         "outputs" : [ {
-          "id" : "IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ",
+          "id" : "ErQXHGglyi53K3vqquxFz$$jw1n1qZWGrrYrQ93vbx14",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false

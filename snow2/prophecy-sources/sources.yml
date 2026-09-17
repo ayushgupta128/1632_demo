@@ -8,23 +8,59 @@ sources:
   - name: "a1h"
     description: "Details of aircraft models, including their range and codes, supporting\
       \ fleet management and planning decisions."
-    identifier: "table1"
+    identifier: "AIRPORTS_DATA"
     config:
       tags:
       - "pipeline:p2"
     quoting:
       identifier: true
     columns:
-    - name: "AIRCRAFT_CODE"
-      description: "Unique code assigned to each aircraft for identification."
+    - name: "AIRPORT_CODE"
       dataType:
         type: "String"
-    - name: "MODEL"
-      description: "Model name or type of the aircraft."
+    - name: "AIRPORT_NAME"
       dataType:
         type: "String"
-    - name: "RANGE"
-      description: "Maximum distance the aircraft can travel without refueling."
+    - name: "CITY"
       dataType:
-        type: "Number"
+        type: "String"
+    - name: "COORDINATES"
+      dataType:
+        type: "String"
+    - name: "TIMEZONE"
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "snow_alias"
+    description: "Comprehensive information on airports, supporting identification\
+      \ and location of airports by name, code, city, and timezone."
+    identifier: "AIRPORTS_DATA"
+    config:
+      tags:
+      - "pipeline:p3"
+    quoting:
+      identifier: true
+    columns:
+    - name: "AIRPORT_CODE"
+      description: "Unique code assigned to each airport, used for identification\
+        \ in travel and logistics."
+      dataType:
+        type: "String"
+    - name: "AIRPORT_NAME"
+      description: "Official name of the airport as recognized by aviation authorities."
+      dataType:
+        type: "String"
+    - name: "CITY"
+      description: "City where the airport is located or primarily serves."
+      dataType:
+        type: "String"
+    - name: "COORDINATES"
+      description: "Geographical latitude and longitude of the airport location."
+      dataType:
+        type: "String"
+    - name: "TIMEZONE"
+      description: "Time zone in which the airport operates, affecting flight schedules\
+        \ and operations."
+      dataType:
+        type: "String"
     type: "table"

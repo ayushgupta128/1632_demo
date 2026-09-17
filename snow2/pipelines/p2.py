@@ -13,5 +13,12 @@ Schedules = [Schedule(
 args = PipelineArgs(label = "p2", version = 1, auto_layout = False, schedules = Schedules)
 
 with Pipeline(args) as pipeline:
-    p2__reformat_1 = Process(name = "p2__Reformat_1", properties = ModelTransform(modelName = "p2__Reformat_1"))
+    aircraft_fleet_snowflake = Process(
+        name = "aircraft_fleet_snowflake",
+        properties = Dataset(
+          table = Dataset.DBTSource(name = "a1h", sourceType = "Table", sourceName = "AIRLINES_AIRLINES"),
+          writeOptions = {"writeMode" : "overwrite"}
+        ),
+        comment = "Loads airline data from the AIRLINES_AIRLINES table for further processing."
+    )
 

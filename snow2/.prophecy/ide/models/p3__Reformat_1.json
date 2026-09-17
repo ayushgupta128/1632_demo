@@ -1,7 +1,7 @@
 {
-  "id" : "p2__Reformat_1",
+  "id" : "p3__Reformat_1",
   "metainfo" : {
-    "label" : "p2__Reformat_1",
+    "label" : "p3__Reformat_1",
     "autoLayout" : true,
     "staleState" : "none",
     "sourceSuggestions" : {
@@ -18,8 +18,8 @@
     "version" : 3
   },
   "processes" : {
-    "Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ" : {
-      "id" : "Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ",
+    "Reformat_1_elmHMWHzl1chut3Nqsg-r$$M1jC2_q-Fu21PlAgSnl_L" : {
+      "id" : "Reformat_1_elmHMWHzl1chut3Nqsg-r$$M1jC2_q-Fu21PlAgSnl_L",
       "component" : "TargetModel",
       "metadata" : {
         "label" : "Reformat_1"
@@ -48,13 +48,13 @@
         "autoUpdateOnRun" : false
       }
     },
-    "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw" : {
-      "id" : "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw",
+    "4DxnAZnRkayRC4DgwRrYV$$asSQqb4H9dOR42WqnTCOw" : {
+      "id" : "4DxnAZnRkayRC4DgwRrYV$$asSQqb4H9dOR42WqnTCOw",
       "component" : "Reformat",
       "metadata" : {
         "label" : "Reformat_1",
-        "x" : -140,
-        "y" : -300,
+        "x" : -120,
+        "y" : -140,
         "phase" : 0
       },
       "properties" : {
@@ -63,30 +63,30 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "6uUH237WUTfacXhMMU_Kd$$JCqI__c5nfyd9v52bTJ7P",
+          "id" : "5eQzZCLYLUaaFhXFQRkJ7$$_MGNOqIGDy7-1SUJHhz6V",
           "slug" : "in0"
         } ],
         "outputs" : [ {
-          "id" : "IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ",
+          "id" : "elmHMWHzl1chut3Nqsg-r$$M1jC2_q-Fu21PlAgSnl_L",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       }
     },
-    "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF" : {
-      "id" : "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF",
+    "-SMMWZawWB1LW-XGoOEgT$$hDa-SCY786d4jrF2gvKlb" : {
+      "id" : "-SMMWZawWB1LW-XGoOEgT$$hDa-SCY786d4jrF2gvKlb",
       "component" : "Source",
       "metadata" : {
-        "label" : "aircraft_fleet_snowflake",
-        "x" : -560,
-        "y" : -280,
+        "label" : "airport_directory_snowflake",
+        "x" : -280,
+        "y" : -120,
         "phase" : 0,
-        "comment" : "Loads airline data from the AIRLINES_AIRLINES table for further processing."
+        "comment" : "Loads airline data from the AIRLINES_AIRLINES table for further processing in the pipeline."
       },
       "properties" : {
         "table" : {
-          "name" : "a1h",
+          "name" : "snow_alias",
           "sourceType" : "Table",
           "sourceName" : "AIRLINES_AIRLINES",
           "alias" : ""
@@ -98,7 +98,7 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "ErQXHGglyi53K3vqquxFz$$jw1n1qZWGrrYrQ93vbx14",
+          "id" : "IqGYcxNKuhx-NSAxqUOTI$$r2B5PMJD-o1hKKZS6BZ8i",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -107,18 +107,18 @@
     }
   },
   "connections" : [ {
-    "id" : "conn_dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ_Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ",
-    "source" : "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw",
-    "sourcePort" : "IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ",
-    "target" : "Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ",
+    "id" : "conn_4DxnAZnRkayRC4DgwRrYV$$asSQqb4H9dOR42WqnTCOw_elmHMWHzl1chut3Nqsg-r$$M1jC2_q-Fu21PlAgSnl_L_Reformat_1_elmHMWHzl1chut3Nqsg-r$$M1jC2_q-Fu21PlAgSnl_L",
+    "source" : "4DxnAZnRkayRC4DgwRrYV$$asSQqb4H9dOR42WqnTCOw",
+    "sourcePort" : "elmHMWHzl1chut3Nqsg-r$$M1jC2_q-Fu21PlAgSnl_L",
+    "target" : "Reformat_1_elmHMWHzl1chut3Nqsg-r$$M1jC2_q-Fu21PlAgSnl_L",
     "targetPort" : "input_port_0",
     "isWireless" : false
   }, {
-    "id" : "e4VOkwnevt10153R4mRXf",
-    "source" : "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF",
-    "sourcePort" : "ErQXHGglyi53K3vqquxFz$$jw1n1qZWGrrYrQ93vbx14",
-    "target" : "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw",
-    "targetPort" : "6uUH237WUTfacXhMMU_Kd$$JCqI__c5nfyd9v52bTJ7P",
+    "id" : "AlP2Wyx3AdD11hkr7wczx$$pRu6__IUVQjoo3_7oGGUJ",
+    "source" : "-SMMWZawWB1LW-XGoOEgT$$hDa-SCY786d4jrF2gvKlb",
+    "sourcePort" : "IqGYcxNKuhx-NSAxqUOTI$$r2B5PMJD-o1hKKZS6BZ8i",
+    "target" : "4DxnAZnRkayRC4DgwRrYV$$asSQqb4H9dOR42WqnTCOw",
+    "targetPort" : "5eQzZCLYLUaaFhXFQRkJ7$$_MGNOqIGDy7-1SUJHhz6V",
     "isWireless" : false
   } ],
   "component" : "Model"

@@ -1,0 +1,69 @@
+{
+  "id" : "p3",
+  "metainfo" : {
+    "label" : "p3",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedules" : [ {
+      "name" : "schedule_fis",
+      "scheduleType" : "cron",
+      "cron" : "0 0/1 * * * ? *",
+      "timeZone" : "Asia/Kolkata",
+      "emailOnSuccess" : true,
+      "emailOnFailure" : true,
+      "emailOnStart" : true,
+      "emails" : [ "g.ayush@prophecy.io" ],
+      "enabled" : true,
+      "runGenericDataTests" : false,
+      "triggers" : { },
+      "pipelineParameterSet" : "default",
+      "versionMode" : "latest"
+    } ],
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "-SMMWZawWB1LW-XGoOEgT$$hDa-SCY786d4jrF2gvKlb" : "models/p3/p3__Reformat_1.sql",
+      "Reformat_1_elmHMWHzl1chut3Nqsg-r$$M1jC2_q-Fu21PlAgSnl_L" : "models/p3/p3__Reformat_1.sql",
+      "4DxnAZnRkayRC4DgwRrYV$$asSQqb4H9dOR42WqnTCOw" : "models/p3/p3__Reformat_1.sql"
+    }
+  },
+  "processes" : {
+    "4DxnAZnRkayRC4DgwRrYV$$asSQqb4H9dOR42WqnTCOw" : {
+      "id" : "4DxnAZnRkayRC4DgwRrYV$$asSQqb4H9dOR42WqnTCOw",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "p3__Reformat_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "p3__Reformat_1"
+      },
+      "visualMetaInfo" : {
+        "lastNodeProcessIds" : [ "Reformat_1_elmHMWHzl1chut3Nqsg-r$$M1jC2_q-Fu21PlAgSnl_L" ],
+        "skipIfZeroRows" : false,
+        "visualProcessIds" : [ "Reformat_1_elmHMWHzl1chut3Nqsg-r$$M1jC2_q-Fu21PlAgSnl_L", "4DxnAZnRkayRC4DgwRrYV$$asSQqb4H9dOR42WqnTCOw", "-SMMWZawWB1LW-XGoOEgT$$hDa-SCY786d4jrF2gvKlb" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "5eQzZCLYLUaaFhXFQRkJ7$$_MGNOqIGDy7-1SUJHhz6V",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "elmHMWHzl1chut3Nqsg-r$$M1jC2_q-Fu21PlAgSnl_L",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Pipeline"
+}

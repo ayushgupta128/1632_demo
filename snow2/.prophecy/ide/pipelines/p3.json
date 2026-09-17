@@ -1,0 +1,105 @@
+{
+  "id" : "p3",
+  "metainfo" : {
+    "label" : "p3",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedules" : [ {
+      "name" : "schedule_fis",
+      "scheduleType" : "cron",
+      "cron" : "0 0/1 * * * ? *",
+      "timeZone" : "Asia/Kolkata",
+      "emailOnSuccess" : true,
+      "emailOnFailure" : true,
+      "emailOnStart" : true,
+      "emails" : [ "g.ayush@prophecy.io" ],
+      "enabled" : true,
+      "runGenericDataTests" : false,
+      "triggers" : { },
+      "pipelineParameterSet" : "default",
+      "versionMode" : "latest"
+    } ],
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "-SMMWZawWB1LW-XGoOEgT$$hDa-SCY786d4jrF2gvKlb" : "models/p3/p3__Reformat_1.sql",
+      "Reformat_1_elmHMWHzl1chut3Nqsg-r$$M1jC2_q-Fu21PlAgSnl_L" : "models/p3/p3__Reformat_1.sql",
+      "4DxnAZnRkayRC4DgwRrYV$$asSQqb4H9dOR42WqnTCOw" : "models/p3/p3__Reformat_1.sql"
+    }
+  },
+  "processes" : {
+    "-SMMWZawWB1LW-XGoOEgT$$hDa-SCY786d4jrF2gvKlb" : {
+      "id" : "-SMMWZawWB1LW-XGoOEgT$$hDa-SCY786d4jrF2gvKlb",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "airport_directory_snowflake",
+        "x" : -280,
+        "y" : -120,
+        "phase" : 0,
+        "comment" : "Loads airline data from the AIRLINES_AIRLINES table for further processing in the pipeline.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "table" : {
+          "name" : "snow_alias",
+          "sourceType" : "Table",
+          "sourceName" : "AIRLINES_AIRLINES",
+          "alias" : ""
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "2_cuphajW_j5vuq0AJthn$$kff9xUK0UYiCE_LVQXi7k",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "IqGYcxNKuhx-NSAxqUOTI$$r2B5PMJD-o1hKKZS6BZ8i",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "4DxnAZnRkayRC4DgwRrYV$$asSQqb4H9dOR42WqnTCOw" : {
+      "id" : "4DxnAZnRkayRC4DgwRrYV$$asSQqb4H9dOR42WqnTCOw",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "x" : -120,
+        "y" : -140,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "5eQzZCLYLUaaFhXFQRkJ7$$_MGNOqIGDy7-1SUJHhz6V",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "elmHMWHzl1chut3Nqsg-r$$M1jC2_q-Fu21PlAgSnl_L",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "AlP2Wyx3AdD11hkr7wczx$$pRu6__IUVQjoo3_7oGGUJ",
+    "source" : "-SMMWZawWB1LW-XGoOEgT$$hDa-SCY786d4jrF2gvKlb",
+    "sourcePort" : "IqGYcxNKuhx-NSAxqUOTI$$r2B5PMJD-o1hKKZS6BZ8i",
+    "target" : "4DxnAZnRkayRC4DgwRrYV$$asSQqb4H9dOR42WqnTCOw",
+    "targetPort" : "5eQzZCLYLUaaFhXFQRkJ7$$_MGNOqIGDy7-1SUJHhz6V"
+  } ],
+  "component" : "Pipeline"
+}
