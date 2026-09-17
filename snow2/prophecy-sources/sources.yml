@@ -8,35 +8,25 @@ sources:
   - name: "a1h"
     description: "Details of aircraft models, including their range and codes, supporting\
       \ fleet management and planning decisions."
-    identifier: "dummy"
+    identifier: "AIRCRAFTS_DATA"
     config:
       tags:
       - "pipeline:p2"
     quoting:
       identifier: true
     columns:
-    - name: "AIRPORT_CODE"
-      description: "Unique code assigned to each airport, used for identification\
-        \ in travel and logistics."
+    - name: "AIRCRAFT_CODE"
+      description: "Unique code assigned to each aircraft for identification."
       dataType:
         type: "String"
-    - name: "AIRPORT_NAME"
-      description: "Official name of the airport as recognized by aviation authorities."
+    - name: "MODEL"
+      description: "Model name or type of the aircraft."
       dataType:
         type: "String"
-    - name: "CITY"
-      description: "City where the airport is located or primarily serves."
+    - name: "RANGE"
+      description: "Maximum distance the aircraft can travel without refueling."
       dataType:
-        type: "String"
-    - name: "COORDINATES"
-      description: "Geographical latitude and longitude of the airport location."
-      dataType:
-        type: "String"
-    - name: "TIMEZONE"
-      description: "Time zone in which the airport operates, affecting flight schedules\
-        \ and operations."
-      dataType:
-        type: "String"
+        type: "Number"
     type: "table"
   - name: "snow_alias"
     description: "Comprehensive information on airports, supporting identification\
