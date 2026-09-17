@@ -1,0 +1,69 @@
+{
+  "id" : "p2",
+  "metainfo" : {
+    "label" : "p2",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedules" : [ {
+      "name" : "sf1",
+      "scheduleType" : "cron",
+      "cron" : "0 0/1 * * * ? *",
+      "timeZone" : "Asia/Kolkata",
+      "emailOnSuccess" : true,
+      "emailOnFailure" : true,
+      "emailOnStart" : true,
+      "emails" : [ "g.ayush@prophecy.io" ],
+      "enabled" : true,
+      "runGenericDataTests" : false,
+      "triggers" : { },
+      "pipelineParameterSet" : "default",
+      "versionMode" : "latest"
+    } ],
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ" : "models/p2/p2__Reformat_1.sql",
+      "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF" : "models/p2/p2__Reformat_1.sql",
+      "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw" : "models/p2/p2__Reformat_1.sql"
+    }
+  },
+  "processes" : {
+    "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw" : {
+      "id" : "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "p2__Reformat_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "p2__Reformat_1"
+      },
+      "visualMetaInfo" : {
+        "lastNodeProcessIds" : [ "Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ" ],
+        "skipIfZeroRows" : false,
+        "visualProcessIds" : [ "Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ", "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw", "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "6uUH237WUTfacXhMMU_Kd$$JCqI__c5nfyd9v52bTJ7P",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Pipeline"
+}

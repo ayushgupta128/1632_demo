@@ -1,0 +1,30 @@
+---
+version: 2
+sources:
+- name: "AIRLINES_AIRLINES"
+  database: "AIRLINES"
+  schema: "AIRLINES"
+  tables:
+  - name: "a1h"
+    description: "Details of aircraft models, including their range and codes, supporting\
+      \ fleet management and planning decisions."
+    identifier: "AIRCRAFTS_DATA"
+    config:
+      tags:
+      - "pipeline:p2"
+    quoting:
+      identifier: true
+    columns:
+    - name: "AIRCRAFT_CODE"
+      description: "Unique code assigned to each aircraft for identification."
+      dataType:
+        type: "String"
+    - name: "MODEL"
+      description: "Model name or type of the aircraft."
+      dataType:
+        type: "String"
+    - name: "RANGE"
+      description: "Maximum distance the aircraft can travel without refueling."
+      dataType:
+        type: "Number"
+    type: "table"

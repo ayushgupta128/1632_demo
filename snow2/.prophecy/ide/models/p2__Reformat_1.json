@@ -1,0 +1,125 @@
+{
+  "id" : "p2__Reformat_1",
+  "metainfo" : {
+    "label" : "p2__Reformat_1",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"EDW_EAST_DEV\"",
+        "schema" : "\"DIMENSIONAL\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ" : {
+      "id" : "Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "Reformat_1"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM Reformat_1\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0",
+          "slug" : "input_port_0"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0",
+          "slug" : "output_port_0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw" : {
+      "id" : "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "x" : -140,
+        "y" : -300,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "6uUH237WUTfacXhMMU_Kd$$JCqI__c5nfyd9v52bTJ7P",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF" : {
+      "id" : "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "aircraft_fleet_snowflake",
+        "x" : -560,
+        "y" : -280,
+        "phase" : 0,
+        "comment" : "Loads airline data from the AIRLINES_AIRLINES table for further processing."
+      },
+      "properties" : {
+        "table" : {
+          "name" : "a1h",
+          "sourceType" : "Table",
+          "sourceName" : "AIRLINES_AIRLINES",
+          "alias" : ""
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "ErQXHGglyi53K3vqquxFz$$jw1n1qZWGrrYrQ93vbx14",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ_Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ",
+    "source" : "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw",
+    "sourcePort" : "IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ",
+    "target" : "Reformat_1_IrIsmPo_snghgmVrWvf5n$$dvRDp4eemhuw4uQN8nnfZ",
+    "targetPort" : "input_port_0",
+    "isWireless" : false
+  }, {
+    "id" : "e4VOkwnevt10153R4mRXf",
+    "source" : "js0CxCBRzVwfiElEoLPtu$$kIZPzlkEM_5gC4iah10rF",
+    "sourcePort" : "ErQXHGglyi53K3vqquxFz$$jw1n1qZWGrrYrQ93vbx14",
+    "target" : "dgPN32WI_x1AgtlgEE7mE$$J8rUl0v8eE5U_yc2o98Xw",
+    "targetPort" : "6uUH237WUTfacXhMMU_Kd$$JCqI__c5nfyd9v52bTJ7P",
+    "isWireless" : false
+  } ],
+  "component" : "Model"
+}
