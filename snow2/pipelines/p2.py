@@ -1,7 +1,7 @@
 from prophecy_pipeline_sdk.graph import *
 from prophecy_pipeline_sdk.properties import *
 Schedules = [Schedule(
-               Name = "sf1",
+               Name = "sf2",
                emails = ["g.ayush@prophecy.io"],
                emailOnStart = True,
                emailOnFailure = True,

@@ -11,7 +11,7 @@
       }
     },
     "schedules" : [ {
-      "name" : "sf1",
+      "name" : "sf2",
       "scheduleType" : "cron",
       "cron" : "0 0/1 * * * ? *",
       "timeZone" : "Asia/Kolkata",

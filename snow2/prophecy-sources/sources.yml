@@ -8,7 +8,7 @@ sources:
   - name: "a1h"
     description: "Details of aircraft models, including their range and codes, supporting\
       \ fleet management and planning decisions."
-    identifier: "AIRCRAFTS_DATA"
+    identifier: "table1"
     config:
       tags:
       - "pipeline:p2"
